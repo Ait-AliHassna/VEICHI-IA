@@ -1,0 +1,44 @@
+Avant de commencer les testes sur PC : il faut installer :
+installer python ( faite attention version de python obligatoiement il faut qu'elle soit : >=3.10.0 et pip soit >=21.2.3)
+- library : 
+Serial 
+OpenCV et Numpy
+mediapipe
+1-connecter votre web cam using cable usb
+2- connecte la carte arduino using cable usb
+3- detecte le port de carte usb ( au cas de non detection de la carte il faut télecharger drive CH340 sur le site :
+https://sparks.gogo.co.nz/ch340.html)
+4 - aprés detection de la carte arduino il faut changer le numéro de COM ( numéro de port) sur la ligne de code suivante:
+la ligne (26 : arduino = serial.Serial(port='COM8', baudrate=9600, timeout=.1)  il faut changer COM8 par COMX (X c'est le numéeo de port)
+vous pouvez déterminer le numéro de port en utilisant gestionnaire de peripheriques )
+
+5- lancer le programme : programme_principal.py
+
+6- congrats : vous pouvez faire les testes demandées :
+entrant au programme :
+au départ vous allez rencontrer une interface au le task =? il faut faire un gesture qu'elle que soit mais inclus dans les trois task ( demarrage , 
+vitesse, changement de sens ) 
+2=> une fois le systeme detecte le task , il te donne la main d'entrée dans le task , et manipuler les testes demandée selon le type de task 
+------------------------------------------------->Detection de task a un timing de 5s 
+------------------------------------------------->Choix de type de gesture selon la task prend aussi 5s 
+-------------------------------------------------> le timing est configurable 
+
+Attention :
+reduction de size d'image traité par raspberry c'est tres important pour accelerer la vitesse de calcule (Unité de calcul et traitement)
+Tout le traitement se fait par la main droite .
+il faut etre presque proche a la cam pour une bonne détection ---------> le systeme commence a detecté le task lorsqu'on aura un Cadre vert autour notre main droite.
+
+
+
+
+
+
+
+
+
+
+
+Auteur:
+Ait-Ali Hassna
+ing:Electronics and Embedded System (ENSEM)
+
